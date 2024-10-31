@@ -1,6 +1,6 @@
 {
   "name": "page-capturer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Captures a screenshot of any webpage. And that's all...",
   "homepage": "https://github.com/sefinek/node-page-capturer#readme",
   "bugs": {
