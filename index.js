@@ -1,9 +1,12 @@
-const puppeteer = require('puppeteer');
-const fs = require('fs');
-const path = require('path');
+const puppeteer = require('puppeteer-extra');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+puppeteer.use(StealthPlugin());
+const fs = require('node:fs');
+const path = require('node:path');
 
 const DOMAIN = 'https://duckduckgo.com/?q=cat&iax=images&ia=images';
-const CAPTURE_FULL_PAGE = false;
+// const DOMAIN = 'https://sefinek.net';
+const CAPTURE_FULL_PAGE = true;
 
 const sanitizeFileName = url => url.replace(/[:\\/?&=]/g, '_');
 const formatDate = () => new Date().toISOString().split('T')[0];
@@ -49,7 +52,6 @@ const formatTimestamp = () => new Date().toISOString().replace(/[:.]/g, '-');
 		const page = pages[0];
 
 		// Setting User-Agent etc.
-		// await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36');
 		await page.setViewport({ width: 1920, height: 1080 });
 
 		// Navigate to the target page
