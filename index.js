@@ -41,8 +41,8 @@ const formatTimestamp = () => new Date().toISOString().replace(/[:.]/g, '-');
 				'--password-store=basic',
 				'--use-mock-keychain',
 				'--disable-webrtc',
-				'--start-maximized'
-			]
+				'--start-maximized',
+			],
 		});
 
 		const pages = await browser.pages();
@@ -63,7 +63,7 @@ const formatTimestamp = () => new Date().toISOString().replace(/[:.]/g, '-');
 		fs.mkdirSync(saveDir, { recursive: true });
 		await page.screenshot({
 			path: path.join(saveDir, `${CAPTURE_FULL_PAGE ? 'fullscreen' : 'page'}_${formatTimestamp()}.png`),
-			fullPage: CAPTURE_FULL_PAGE
+			fullPage: CAPTURE_FULL_PAGE,
 		});
 
 		await browser.close();
