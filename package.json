@@ -1,7 +1,7 @@
 {
   "name": "page-capturer",
   "version": "1.0.1",
-  "description": "Captures a screenshot of any webpage. And that's all...",
+  "description": "Captures a screenshot of any webpage. And that's all.",
   "homepage": "https://github.com/sefinek/node-page-capturer#readme",
   "bugs": {
     "url": "https://github.com/sefinek/node-page-capturer/issues"
@@ -14,16 +14,16 @@
   "author": "Sefinek <contact@sefinek.net> (https://sefinek.net)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "up": "ncu -u && npm install && npm update && npm audit fix"
+    "m": "ncu -u && npm install && npm update",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "puppeteer": "^23.6.1",
+    "puppeteer": "^24.34.0",
     "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2"
   },
   "devDependencies": {
-    "@eslint/js": "^9.13.0",
-    "globals": "^15.11.0"
+    "@eslint/js": "^9.39.2",
+    "globals": "^16.5.0"
   }
 }
